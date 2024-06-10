@@ -1,9 +1,8 @@
 .sidebar svg {
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-  }
-  .sidebar .nav-link {
-    font-size: 1.25rem; /* Increase text size */
-    margin-bottom: 4.5rem; /* Increase spacing between links */
-  }
-  
+  width: 32px; /* Adjust size as needed */
+  height: 32px; /* Adjust size as needed */
+}
+.sidebar .nav-link {
+  font-size: 1.25rem; /* Increase text size */
+  margin-bottom: 4.5rem; /* Increase spacing between links */
+}

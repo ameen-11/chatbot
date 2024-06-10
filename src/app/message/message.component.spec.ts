@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DocGeneratorComponent } from './doc-generator.component';
+import { MessageComponent } from './message.component';
 
-describe('DocGeneratorComponent', () => {
-  let component: DocGeneratorComponent;
-  let fixture: ComponentFixture<DocGeneratorComponent>;
+describe('MessageComponent', () => {
+  let component: MessageComponent;
+  let fixture: ComponentFixture<MessageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DocGeneratorComponent],
+      imports: [MessageComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DocGeneratorComponent);
+    fixture = TestBed.createComponent(MessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

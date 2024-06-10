@@ -6,5 +6,5 @@ import { ChattingComponent } from './chatting/chatting.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Map the root path ('/') to HomeComponent
   { path: 'docs', component: DocGeneratorComponent }, // Map '/docs' path to DocGeneratorComponent
-  { path: 'chat', component: ChattingComponent } // Map '/chat' path to ChattingComponent
+  { path: 'chat', component: ChattingComponent }, // Map '/chat' path to ChattingComponent
 ];
