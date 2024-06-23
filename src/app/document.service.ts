@@ -17,6 +17,9 @@ export class DocumentService {
         map(data => data.map(document => ({ file: document.file, activity: document.activity, generation :document.generation,createdon :document.createdon  }))) // Map to Chat[] with only name and age
       );;
   }
- 
+  private apidoc = 'http://localhost:8080/api/Doc';
+  addDocument(newDocument: Document): Observable<Document> {
+    return this.http.post<Document>(this.apidoc, newDocument);
+  }
   
 }

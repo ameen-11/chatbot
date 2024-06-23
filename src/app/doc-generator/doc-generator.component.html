@@ -26,8 +26,39 @@
         Generation History
       </h1>
       <div class="col-6 d-flex justify-content-end">
-        <button class="btn btn-primary">Add Doc</button>
+        <button class="btn btn-primary" (click)="openDocumentModal()">Add Doc</button>
       </div>
+      
+      <div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true" [class.show]="isModalOpen" [style.display]="isModalOpen ? 'block' : 'none'">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="documentModalLabel">Add Document</h5>
+              <button type="button" class="btn-close" aria-label="Close" (click)="closeDocumentModal()">
+                <span aria-hidden="true">&times;</span>
+              </button>              
+            </div>
+            <div class="modal-body">
+              <form (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="file" class="form-label">File Name</label>
+                  <input type="text" class="form-control" id="file" [(ngModel)]="newDocument.file" name="file" required>
+                </div>
+                <div class="mb-3">
+                  <label for="activity" class="form-label">Activity</label>
+                  <input type="text" class="form-control" id="activity" [(ngModel)]="newDocument.activity" name="activity" required>
+                </div>
+                <div class="mb-3">
+                  <label for="generation" class="form-label">Generation</label>
+                  <input type="text" class="form-control" id="generation" [(ngModel)]="newDocument.generation" name="generation" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Document</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+          
     </div>
     </div>
     <div class="container-fluid p-3">
