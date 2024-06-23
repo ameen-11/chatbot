@@ -20,6 +20,16 @@
     </div>
   </div>
   <div class="row half-height bg-light">
+    <div class="col-12">
+    <div class="d-flex justify-content-between align-items-center ">
+      <h1 class="text-start">
+        Generation History
+      </h1>
+      <div class="col-6 d-flex justify-content-end">
+        <button class="btn btn-primary">Add Doc</button>
+      </div>
+    </div>
+    </div>
     <div class="container-fluid p-3">
       <!-- Title Section -->
       <div class="row mb-3 mb-5">
@@ -49,31 +59,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>22-03-2024 23:12:35</td>
-                <td>F1</td>
-                <td>Version upgrade</td>
-                <td>In-progress</td>
-                <td>
-                  <button class="btn btn-sm btn-primary mr-2">Download</button>
-                  <button class="btn btn-sm btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>22-03-2024 23:12:35</td>
-                <td>F1</td>
-                <td>Version upgrade</td>
-                <td>In-progress</td>
-                <td>
-                  <button class="btn btn-sm btn-primary mr-2">Download</button>
-                  <button class="btn btn-sm btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>22-03-2024 23:12:35</td>
-                <td>F1</td>
-                <td>Version upgrade</td>
-                <td>In-progress</td>
+              <tr *ngFor="let document of documentData">
+                <td>{{ document.createdon | date:'dd-MM-yyyy HH:mm:ss' }}</td>
+                <td>{{ document.file }}</td>
+                <td>{{ document.activity }}</td>
+                <td>{{ document.generation }}</td>
                 <td>
                   <button class="btn btn-sm btn-primary mr-2">Download</button>
                   <button class="btn btn-sm btn-danger">Delete</button>
@@ -83,6 +73,7 @@
           </table>
         </div>
       </div>
+      
     </div>
   </div>
 </div>

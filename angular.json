@@ -66,6 +66,7 @@
             },
             "development": {
               "buildTarget": "chatbot:build:development"
+              
             }
           },
           "defaultConfiguration": "development"
